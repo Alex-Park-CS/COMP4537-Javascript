@@ -85,9 +85,8 @@ class Game {
         this.buttons.forEach((b) => {
             b.randomizePosition();
             b.container.appendChild(b.element);
+            b.hideLabel();
         });
-        
-        // this.startGuessingPhase();
 
     }
 
