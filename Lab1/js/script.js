@@ -12,6 +12,7 @@ class Button {
         this.container.appendChild(this.element);
     }
 
+
     getRandomColor() {
         return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
     }
@@ -66,9 +67,12 @@ class Game {
         // Store the original order of the buttons
         this.originalOrder = this.buttons.map((b) => b.index);
 
+        
         setTimeout(() => {
-            this.scrambleButtons(numButtons)
+            this.scrambleMultipleTimes(numButtons)
         }, 1000 * numButtons);
+
+        // this.startGuessingPhase();
     }
 
     scrambleButtons(numButtons) {
@@ -83,9 +87,24 @@ class Game {
             b.container.appendChild(b.element);
         });
         
-        this.startGuessingPhase();
+        // this.startGuessingPhase();
 
     }
+
+    scrambleMultipleTimes(numButtons) {
+        let count = 0; // Track the number of scrambles
+        const intervalId = setInterval(() => {
+            if (count >= numButtons) {
+                clearInterval(intervalId); // Stop scrambling after `numButtons` times
+                this.startGuessingPhase(); // Start the guessing phase after scrambling
+                return;
+            }
+            this.scrambleButtons(numButtons);
+            console.log(`Scramble #${count + 1}`);
+            count++;
+        }, 1000 * 2); // Scramble once every second
+    }
+
 
     startGuessingPhase() {
         // Hide labels and add click event listeners

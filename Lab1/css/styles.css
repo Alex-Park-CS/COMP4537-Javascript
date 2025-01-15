@@ -36,4 +36,21 @@
 .button:active {
     opacity: 0.9; /* Slightly less transparent than hover */
     transform: scale(0.95); /* Creates a pressed-down effect */
-} 
+}
+
+@media (max-width: 600px) {
+    #buttonArea {
+        height: 400px; /* Adjust height for smaller screens */
+    }
+
+    .button {
+        height: 3em;
+        width: 7em;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #messageArea {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
