@@ -1,0 +1,42 @@
+#add-button {
+    border: black 1px solid;
+    margin: 10px;
+    padding: 10px;
+    height: 5em;
+    width: 10em;
+}
+
+.note {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px;
+}
+
+.textbox {
+    width: 15em;
+    height: 7em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: yellow;
+    align-items: center;
+    font-size: 20px;
+}
+
+.removeButton {
+    border: black 1px solid;
+    margin: 10px;
+    padding: 10px;
+    height: 3em;
+    width: 7em;
+    background-color: red;
+    color: white;
+}
+
+#top-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    gap: 150px;
+}
