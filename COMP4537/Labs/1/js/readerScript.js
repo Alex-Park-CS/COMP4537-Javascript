@@ -39,6 +39,7 @@ class readNotes {
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('readerTitle').innerHTML = MESSAGES.readerPageTitle;
+    document.getElementById('back-button').innerHTML = MESSAGES.backButton
     new readNotes(); 
 });
 

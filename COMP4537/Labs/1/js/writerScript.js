@@ -78,6 +78,7 @@ class WriteNotes{
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('writerTitle').innerHTML = MESSAGES.writerPageTitle;
     document.getElementById('add-button').innerHTML = MESSAGES.addButton;
+    document.getElementById('back-button').innerHTML = MESSAGES.backButton;
     new WriteNotes();
 });
 
