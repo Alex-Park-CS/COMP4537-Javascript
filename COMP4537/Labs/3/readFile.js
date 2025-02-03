@@ -34,5 +34,5 @@ class ReadFileServer {
 }
 
 // Instantiate and start the server
-const server = new ReadFileServer(8888);
+const server = new ReadFileServer(8001);
 server.start();

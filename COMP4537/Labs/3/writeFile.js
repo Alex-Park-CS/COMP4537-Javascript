@@ -44,5 +44,5 @@ class WriteFileServer {
 }
 
 // Instantiate and start the server
-const server = new WriteFileServer(8888);
+const server = new WriteFileServer(8002);
 server.start();

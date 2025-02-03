@@ -24,5 +24,5 @@ class DateServer {
 }
 
 // Instantiate and start the server
-const server = new DateServer(8888);
+const server = new DateServer(8000);
 server.start();
